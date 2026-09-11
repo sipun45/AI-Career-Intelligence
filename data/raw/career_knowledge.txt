@@ -1,0 +1,47 @@
+Career Knowledge Guide
+
+Python:
+Python is widely used in data science, machine learning, backend development,
+automation, and artificial intelligence.
+
+Machine Learning:
+Machine learning allows computers to learn patterns from data and make
+predictions or decisions.
+
+Data Scientist:
+A data scientist commonly works with Python, SQL, statistics, machine learning,
+data analysis, visualization, and experimentation.
+
+ML Engineer:
+An ML engineer develops, trains, evaluates, and deploys machine learning models.
+Important skills include Python, machine learning, deep learning, APIs, Docker,
+cloud platforms, and MLOps.
+
+Data Analyst:
+A data analyst works with data to identify trends and generate business insights.
+Common skills include SQL, Excel, Python, statistics, and data visualization.
+
+Deep Learning:
+Deep learning uses neural networks with multiple layers to learn complex patterns.
+It is widely used in computer vision, natural language processing, and generative AI.
+
+NLP:
+Natural Language Processing allows computers to process and understand human
+language.
+
+Transformers:
+Transformers use attention mechanisms to process relationships between tokens
+and are widely used in modern NLP and large language models.
+
+RAG:
+Retrieval-Augmented Generation retrieves relevant information from a knowledge
+base before an LLM generates an answer. This can reduce hallucinations and allow
+the system to answer using specific documents.
+
+Career Recommendation:
+A job recommendation system can compare candidate skills, experience, education,
+resume information, and job requirements to calculate a job match score.
+
+MLOps:
+MLOps combines machine learning with software engineering practices such as
+versioning, testing, deployment, monitoring, and reproducibility.

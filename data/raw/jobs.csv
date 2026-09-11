@@ -1,0 +1,21 @@
+job_id,title,experience,education,python,java,sql,ml,deep_learning,cloud,salary
+1,Data Scientist,2,Bachelor,1,0,1,1,0,1,65000
+2,ML Engineer,3,Master,1,0,1,1,1,1,85000
+3,Backend Developer,2,Bachelor,1,1,1,0,0,1,60000
+4,Data Analyst,1,Bachelor,1,0,1,0,0,0,45000
+5,AI Engineer,4,Master,1,0,1,1,1,1,95000
+6,Software Engineer,3,Bachelor,1,1,1,0,0,1,75000
+7,Data Scientist,5,Master,1,0,1,1,1,1,100000
+8,Backend Developer,1,Bachelor,0,1,1,0,0,1,50000
+9,ML Engineer,2,Bachelor,1,0,1,1,1,0,72000
+10,Data Analyst,2,Bachelor,1,0,1,0,0,0,48000
+11,AI Engineer,3,Master,1,0,1,1,1,1,88000
+12,Software Engineer,4,Bachelor,1,1,1,0,0,1,82000
+13,Data Scientist,3,Master,1,0,1,1,0,1,78000
+14,ML Engineer,5,Master,1,0,1,1,1,1,105000
+15,Backend Developer,3,Bachelor,0,1,1,0,0,1,68000
+16,Data Analyst,1,Bachelor,1,0,1,0,0,0,43000
+17,AI Engineer,5,Master,1,0,1,1,1,1,110000
+18,Software Engineer,2,Bachelor,1,1,1,0,0,1,65000
+19,Data Scientist,4,Master,1,0,1,1,1,1,92000
+20,ML Engineer,3,Bachelor,1,0,1,1,1,1,80000
