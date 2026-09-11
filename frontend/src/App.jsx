@@ -1,7 +1,15 @@
 import { useState } from "react";
 import axios from "axios";
 
-const API = "http://127.0.0.1:8000";
+const API = import.meta.env.VITE_API_URL;
+const SEMANTIC_API = import.meta.env.VITE_SEMANTIC_API_URL;
+const RESUME_API = import.meta.env.VITE_RESUME_API_URL;
+const SKILL_API = import.meta.env.VITE_SKILL_API_URL;
+const LEARNING_API = import.meta.env.VITE_LEARNING_API_URL;
+const JOB_API = import.meta.env.VITE_JOB_API_URL;
+const DL_API = import.meta.env.VITE_DL_API_URL;
+const RAG_API = import.meta.env.VITE_RAG_API_URL;
+const AGENT_API = import.meta.env.VITE_AGENT_API_URL;
 
 function App() {
   const [result, setResult] = useState(null);
@@ -168,7 +176,7 @@ function App() {
     setJobSkillGapLoading(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8005/job-skill-gap",
+      `${JOB_API}/job-skill-gap`,
       {
         resume_text: resumeExtractedText,
         skills: skills,
@@ -226,7 +234,7 @@ function App() {
     setSemanticLoading(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8001/semantic-match",
+      `${SEMANTIC_API}/semantic-match`,
       {
         resume_text: resumeText,
         job_description: jobDescription,
@@ -256,7 +264,7 @@ const uploadResume = async () => {
     formData.append("file", resumeFile);
 
     const response = await axios.post(
-      "http://127.0.0.1:8002/extract-resume",
+      `${RESUME_API}/extract-resume`,
       formData,
       {
         headers: {
@@ -285,7 +293,7 @@ const extractSkills = async () => {
     setSkillExtractionLoading(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8003/extract-skills",
+      `${SKILL_API}/extract-skills`,
       {
         resume_text: resumeExtractedText,
       }
@@ -326,7 +334,7 @@ const generateRoadmap = async () => {
     setRoadmapLoading(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8004/learning-roadmap",
+      `${LEARNING_API}/learning-roadmap`,
       {
         skills: skills,
         target_role: targetRole,
@@ -375,7 +383,7 @@ const analyzeRecommendedJobGap = async (jobTitle) => {
     }));
 
     const response = await axios.post(
-      "http://127.0.0.1:8005/job-recommendation-skill-gap",
+      `${JOB_API}/job-recommendation-skill-gap`,
       {
         resume_text: resumeExtractedText,
         skills: skills,
@@ -414,7 +422,7 @@ const predictSalaryWithDeepLearning = async () => {
     setDeepLearningLoading(true);
 
     const response = await axios.post(
-      "http://127.0.0.1:8006/predict-salary-dl",
+      `${DL_API}/predict-salary-dl`,
       {
         experience: Number(form.experience),
         education_encoded: Number(form.education_encoded),
@@ -466,7 +474,7 @@ const predictSalaryWithDeepLearning = async () => {
         : "Bachelor";
 
     const response = await axios.post(
-  "http://127.0.0.1:8005/match-jobs",
+  `${JOB_API}/match-jobs`,
   {
     resume_text: resumeExtractedText,
     skills: skills,
@@ -510,7 +518,7 @@ const askRAGAssistant = async () => {
     setRagContext("");
 
     const response = await axios.post(
-      "http://127.0.0.1:8007/rag-assistant",
+      `${RAG_API}/rag-assistant`,
       {
         question: ragQuestion
       }
@@ -535,7 +543,7 @@ const runCareerAgent = async () => {
     setCareerAgentResult(null);
 
     const response = await axios.post(
-      "http://127.0.0.1:8008/career-agent",
+      `${AGENT_API}/career-agent`,
       {
         experience: Number(form.experience),
         education_encoded: Number(form.education_encoded),
@@ -546,7 +554,7 @@ const runCareerAgent = async () => {
         deep_learning: Number(form.deep_learning),
         cloud: Number(form.cloud),
       }
-    );
+    ); 
 
     if (response.data.success) {
       setCareerAgentResult(
