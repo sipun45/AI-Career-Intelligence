@@ -1,0 +1,73 @@
+services:
+
+  main-api:
+    build: .
+    container_name: career-main-api
+    command: uvicorn api.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  semantic-api:
+    build: .
+    container_name: career-semantic-api
+    command: uvicorn src.nlp.semantic_api:app --host 0.0.0.0 --port 8001
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
+
+  resume-api:
+    build: .
+    container_name: career-resume-api
+    command: uvicorn src.nlp.resume_api:app --host 0.0.0.0 --port 8002
+    ports:
+      - "8002:8002"
+    restart: unless-stopped
+
+  skill-extraction-api:
+    build: .
+    container_name: career-skill-api
+    command: uvicorn src.nlp.skill_extraction_api:app --host 0.0.0.0 --port 8003
+    ports:
+      - "8003:8003"
+    restart: unless-stopped
+
+  learning-api:
+    build: .
+    container_name: career-learning-api
+    command: uvicorn src.nlp.learning_api:app --host 0.0.0.0 --port 8004
+    ports:
+      - "8004:8004"
+    restart: unless-stopped
+
+  job-matching-api:
+    build: .
+    container_name: career-job-matching-api
+    command: uvicorn src.nlp.job_matching_api:app --host 0.0.0.0 --port 8005
+    ports:
+      - "8005:8005"
+    restart: unless-stopped
+
+  deep-learning-api:
+    build: .
+    container_name: career-deep-learning-api
+    command: uvicorn api.deep_learning_api:app --host 0.0.0.0 --port 8006
+    ports:
+      - "8006:8006"
+    restart: unless-stopped
+
+  rag-api:
+    build: .
+    container_name: career-rag-api
+    command: uvicorn api.rag_api:app --host 0.0.0.0 --port 8007
+    ports:
+      - "8007:8007"
+    restart: unless-stopped
+
+  career-agent-api:
+    build: .
+    container_name: career-agent-api
+    command: uvicorn api.career_agent_api:app --host 0.0.0.0 --port 8008
+    ports:
+      - "8008:8008"
+    restart: unless-stopped
